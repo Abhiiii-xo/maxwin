@@ -36,7 +36,7 @@ async function updateGame() {
     timestamp: admin.firestore.FieldValue.serverTimestamp()
   });
 
-  console.log(✅ Period ${period} updated with result ${number} (${color}));
+  console.log(`✅ Period ${period} updated with result ${number} (${color}`));
 }
 
 updateGame().catch((err) => {
