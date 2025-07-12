@@ -27,8 +27,10 @@ async function updateGame() {
   else if (number % 2 === 0) color = "green";
   else color = "red";
 
+  // Update game current period and time
   await gameRef.set({ period, startTime });
 
+  // Save result
   await db.collection("results").doc(period.toString()).set({
     period,
     number,
